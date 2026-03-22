@@ -72,6 +72,4 @@ Este proyecto es de uso académico, pero cualquier sugerencia o mejora es bienve
 ## 📬 Contacto
 Puedes revisar este repositorio y dejar comentarios o sugerencias directamente en GitHub.
 
----
 
-⭐ **Si te gusta el proyecto, no olvides darle estrella**
