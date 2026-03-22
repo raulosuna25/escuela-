@@ -1,40 +1,61 @@
-# Esta es la clase
 class Estudiante:
-    #aquí va el constructor
-    def __init__(self,nombre, edad, carrera):
+    def __init__(self, nombre, edad, carrera):
         self.nombre = nombre
         self.edad = edad
         self.carrera = carrera
         self.calificaciones = []
 
-    # Método para agregar calificaciones
-    def setCalificaciones(self, calificacion):
-        self.calificaciones.append(calificacion)
+    # Agregar una calificación con validación
+    def agregarCalificacion(self, calificacion):
+        if 0 <= calificacion <= 100:
+            self.calificaciones.append(calificacion)
+        else:
+            print(f"❌ Calificación inválida: {calificacion}")
 
-    def getNombre(self):
-        return self.nombre
+    # Agregar varias calificaciones
+    def agregarVariasCalificaciones(self, lista):
+        for cal in lista:
+            self.agregarCalificacion(cal)
 
-    # Método para calcular el promedio de calif.
-    def mostrarPromedio(self):
-        if len(self.calificaciones) == 0:
+    # Calcular promedio
+    def calcularPromedio(self):
+        if not self.calificaciones:
             return 0
         return sum(self.calificaciones) / len(self.calificaciones)
-    
-    # Método para mostrar la información del usuario
-    def mostrarInformacionUsuario(self):
-        return f"Hola, soy {self.nombre}, tengo {self.edad} años y estudio {self.carrera}"
-    
 
-# Crear los objetos (instancias) de la clase
-estudiante1 = Estudiante("Raul",30,"Ing. en sistemas")
-estudiante2 = Estudiante("Fatima",25,"Ing. en Industrial")
-estudiante3 = Estudiante("Dayana",20,"Ing. en Electrónica")
+    # Mostrar toda la información
+    def mostrarInformacion(self):
+        promedio = self.calcularPromedio()
+        return (
+            f"Nombre: {self.nombre}\n"
+            f"Edad: {self.edad}\n"
+            f"Carrera: {self.carrera}\n"
+            f"Calificaciones: {self.calificaciones}\n"
+            f"Promedio: {promedio:.2f}\n"
+        )
 
-print(estudiante1.mostrarInformacionUsuario())
+    # Método especial (nivel pro)
+    def __str__(self):
+        return f"{self.nombre} - {self.carrera} (Promedio: {self.calcularPromedio():.2f})"
 
-estudiante1.setCalificaciones(100)
-estudiante1.setCalificaciones(50)
-estudiante1.setCalificaciones(40)
 
-print(f"La calificación del {estudiante1.getNombre()} es: {estudiante1.mostrarPromedio()}")
-print(f"La calificación es: {estudiante2.getNombre()} es: {estudiante2.mostrarPromedio()}")
+# Crear estudiantes
+estudiante1 = Estudiante("Raul", 30, "Ing. en sistemas")
+estudiante2 = Estudiante("Fatima", 25, "Ing. en Industrial")
+estudiante3 = Estudiante("Dayana", 20, "Ing. en Electrónica")
+
+# Agregar calificaciones
+estudiante1.agregarVariasCalificaciones([100, 50, 40])
+estudiante2.agregarVariasCalificaciones([90, 80, 110])  # 110 es inválida
+
+# Mostrar información completa
+print("📊 INFORMACIÓN COMPLETA\n")
+print(estudiante1.mostrarInformacion())
+print(estudiante2.mostrarInformacion())
+print(estudiante3.mostrarInformacion())
+
+# Uso del método especial __str__
+print("📌 RESUMEN")
+print(estudiante1)
+print(estudiante2)
+print(estudiante3)
