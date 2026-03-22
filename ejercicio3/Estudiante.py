@@ -25,9 +25,6 @@ class Estudiante:
         return f"Hola, soy {self.nombre}, tengo {self.edad} años y estudio {self.carrera}"
     
 
-
-
-
 # Crear los objetos (instancias) de la clase
 estudiante1 = Estudiante("Raul",30,"Ing. en sistemas")
 estudiante2 = Estudiante("Fatima",25,"Ing. en Industrial")
