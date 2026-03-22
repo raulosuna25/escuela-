@@ -38,4 +38,40 @@ Durante el curso se están abordando los siguientes temas:
 ---
 
 ## 📂 Estructura del Proyecto
+📁 proyecto-poo
+┣ 📂 ejercicios
+┣ 📂 practicas
+┣ 📂 proyectos
+┗ 📜 README.md
 
+---
+
+## 🚀 Objetivo del Curso
+Desarrollar habilidades en programación utilizando Python y comprender cómo aplicar la **Programación Orientada a Objetos** para resolver problemas reales de manera eficiente.
+
+---
+
+## 🛠️ Herramientas Utilizadas
+- Python 3  
+- Visual Studio Code  
+- Git  
+- GitHub  
+
+---
+
+## 📈 Progreso
+🔄 Este repositorio se encuentra en constante actualización conforme avanza el curso.
+
+---
+
+## 🤝 Contribuciones
+Este proyecto es de uso académico, pero cualquier sugerencia o mejora es bienvenida.
+
+---
+
+## 📬 Contacto
+Puedes revisar este repositorio y dejar comentarios o sugerencias directamente en GitHub.
+
+---
+
+⭐ **Si te gusta el proyecto, no olvides darle estrella**
